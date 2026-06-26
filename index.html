@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDOL Football Club</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="resources\images\logo.jpg" alt="IDOL FC Logo"></div>
+    <h1>IDOL Football Club</h1>
+    <nav class="tabs" aria-label="Main navigation">
+      <button class="tab-button active" data-tab="home">Home</button>
+      <button class="tab-button" data-tab="about">About</button>
+      <button class="tab-button" data-tab="services">Services</button>
+      <button class="tab-button" data-tab="contact">Contact</button>
+    </nav>
+  </header>
+
+  <div class="tab-content">
+    <section id="home" class="tab-pane active">
+      <h2>Welcome to IDOL FC</h2>
+      <p>We provide professional football training for students under 19, guided by experienced coaches. Training sessions are held daily in the mornings and evenings, including weekends.</p>
+    </section>
+
+    <section id="about" class="tab-pane">
+      <h2>About Us</h2>
+      <p>IDOL FC is dedicated to nurturing young talent. Frequent practice matches with outside teams help boost confidence and allow us to identify the best players for future opportunities.</p>
+    </section>
+
+    <section id="services" class="tab-pane">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Daily football training (morning & evening)</li>
+        <li>Weekend practice sessions</li>
+        <li>Special Summer Camp sessions</li>
+        <li>Friendly matches with external teams</li>
+        <li>Skill development & confidence building</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="tab-pane">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:idolfc@example.com">idolfc@example.com</a> | <a href="tel:+919444014017">Call Us</a> | Location: Kanchi Arul Nagar, 2nd Street, East Kavangarai, Chennai 600 066, India <a href="https://maps.app.goo.gl/ZVFKaPvDawAPpduH7" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 IDOL Football Club. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/idolfc10" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=100067028260486" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://maps.app.goo.gl/ZVFKaPvDawAPpduH7" target="_blank" rel="noopener noreferrer">Rate us on Google Maps</a>
+    </div>
+  </footer>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.tab;
+
+        tabButtons.forEach((btn) => btn.classList.toggle('active', btn === button));
+        tabPanes.forEach((pane) => pane.classList.toggle('active', pane.id === target));
+      });
+    });
+  </script>
+</body>
+</html>
